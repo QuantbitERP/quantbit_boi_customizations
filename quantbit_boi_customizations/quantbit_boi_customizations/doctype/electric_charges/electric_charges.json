@@ -1,0 +1,149 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-12-23 11:33:48.534410",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ntcg",
+  "naming_series",
+  "section_break_hpi2",
+  "employee",
+  "column_break_xjs8",
+  "employee_name",
+  "column_break_tbdi",
+  "date",
+  "section_break_x3vh",
+  "charges_details",
+  "section_break_zqj8",
+  "column_break_o9td",
+  "column_break_gx1i",
+  "column_break_pqn9",
+  "total_paye",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_ntcg",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "EC-"
+  },
+  {
+   "fieldname": "section_break_hpi2",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xjs8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_tbdi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_x3vh",
+   "fieldtype": "Section Break",
+   "label": "Electric Charges Details"
+  },
+  {
+   "fieldname": "charges_details",
+   "fieldtype": "Table",
+   "options": "Electric Charges Details"
+  },
+  {
+   "fieldname": "section_break_zqj8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_o9td",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gx1i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pqn9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_paye",
+   "fieldtype": "Float",
+   "label": "Total Paye",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Electric Charges",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-23 12:47:40.179810",
+ "modified_by": "Administrator",
+ "module": "Quantbit Boi Customizations",
+ "name": "Electric Charges",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
