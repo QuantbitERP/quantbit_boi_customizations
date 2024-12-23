@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-12-17 11:25:58.799492",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_1fry",
+  "company",
+  "column_break_mnt1",
+  "applying_date",
+  "column_break_cibl",
+  "approval_date",
+  "employee_details_section",
+  "employee",
+  "column_break_lc1x",
+  "employee_name",
+  "section_break_glyw",
+  "key_details",
+  "section_break_7122",
+  "total_days",
+  "column_break_jn0j",
+  "rate",
+  "column_break_n4hk",
+  "amount",
+  "amended_from",
+  "salary_component"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "KA-"
+  },
+  {
+   "fieldname": "section_break_1fry",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mnt1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "applying_date",
+   "fieldtype": "Date",
+   "label": "Applying Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cibl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Approval Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lc1x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_glyw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "key_details",
+   "fieldtype": "Table",
+   "label": "Key Allowance Details",
+   "options": "Key Allowance Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_7122",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_days",
+   "fieldtype": "Float",
+   "label": "Total Days",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_jn0j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "label": "Rate",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_n4hk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "label": "Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Key Allowance",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Key Allowance",
+   "fieldname": "salary_component",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "salary component",
+   "options": "Salary Component",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-18 11:18:18.955536",
+ "modified_by": "Administrator",
+ "module": "Quantbit Boi Customizations",
+ "name": "Key Allowance",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
