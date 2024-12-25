@@ -10,13 +10,17 @@
   "naming_series",
   "section_break_hkbk",
   "employee",
+  "approver",
   "column_break_nzhf",
   "employee_name",
+  "recommendation",
   "column_break_l9v6",
   "date",
+  "land_owner_account_no",
   "house_rent_benefit_details_section",
   "benifit_details",
   "section_break_vxvn",
+  "attach_receipt",
   "column_break_8zxl",
   "column_break_door",
   "column_break_ntrd",
@@ -129,12 +133,37 @@
    "label": "Total Amount Per Month",
    "precision": "2",
    "read_only": 1
+  },
+  {
+   "fieldname": "attach_receipt",
+   "fieldtype": "Attach",
+   "label": "Attach Receipt",
+   "reqd": 1
+  },
+  {
+   "fieldname": "land_owner_account_no",
+   "fieldtype": "Data",
+   "label": "Land Owner Account No."
+  },
+  {
+   "fetch_from": "employee.custom_expense_approver",
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "label": "Approver",
+   "options": "Role"
+  },
+  {
+   "fetch_from": "employee.custom_expense_recommendation",
+   "fieldname": "recommendation",
+   "fieldtype": "Link",
+   "label": "Recommendation",
+   "options": "Role"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-23 12:47:40.370097",
+ "modified": "2024-12-25 14:10:51.548863",
  "modified_by": "Administrator",
  "module": "Quantbit Boi Customizations",
  "name": "House Rent Benefit",

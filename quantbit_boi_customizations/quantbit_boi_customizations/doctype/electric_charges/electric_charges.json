@@ -10,13 +10,16 @@
   "naming_series",
   "section_break_hpi2",
   "employee",
+  "approver",
   "column_break_xjs8",
   "employee_name",
+  "recommendation",
   "column_break_tbdi",
   "date",
   "section_break_x3vh",
   "charges_details",
   "section_break_zqj8",
+  "attach_receipt",
   "column_break_o9td",
   "column_break_gx1i",
   "column_break_pqn9",
@@ -81,11 +84,6 @@
    "label": "Electric Charges Details"
   },
   {
-   "fieldname": "charges_details",
-   "fieldtype": "Table",
-   "options": "Electric Charges Details"
-  },
-  {
    "fieldname": "section_break_zqj8",
    "fieldtype": "Section Break"
   },
@@ -117,12 +115,37 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "charges_details",
+   "fieldtype": "Table",
+   "options": "Electric Charges Details"
+  },
+  {
+   "fieldname": "attach_receipt",
+   "fieldtype": "Attach",
+   "label": "Attach Receipt",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.custom_expense_approver",
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "label": "Approver",
+   "options": "Role"
+  },
+  {
+   "fetch_from": "employee.custom_expense_recommendation",
+   "fieldname": "recommendation",
+   "fieldtype": "Link",
+   "label": "Recommendation",
+   "options": "Role"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-23 12:47:40.179810",
+ "modified": "2024-12-25 14:14:56.481123",
  "modified_by": "Administrator",
  "module": "Quantbit Boi Customizations",
  "name": "Electric Charges",
