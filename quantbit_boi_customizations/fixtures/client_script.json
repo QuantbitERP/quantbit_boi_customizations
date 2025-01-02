@@ -1,0 +1,24 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Leave Application",
+  "enabled": 1,
+  "modified": "2024-12-16 15:41:35.795928",
+  "module": "Quantbit Boi Customizations",
+  "name": "remove mandatory approver",
+  "script": "frappe.ui.form.on('Leave Application', {\n    onload: function(frm) {\n        frm.set_df_property('leave_approver', 'reqd', false);\n        frm.set_df_property('leave_approver', 'hidden', true); \n    }\n});\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Expense Claim",
+  "enabled": 1,
+  "modified": "2024-12-16 15:41:27.721384",
+  "module": "Quantbit Boi Customizations",
+  "name": "expense approver remove mandatory",
+  "script": "frappe.ui.form.on('Expense Claim', {\n\tonload: function(frm) {\n        frm.set_df_property('expense_approver', 'reqd', false);\n        frm.set_df_property('expense_approver', 'hidden', true); \n    }\n})\n",
+  "view": "Form"
+ }
+]
