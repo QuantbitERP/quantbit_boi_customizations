@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-23 11:30:29.740921",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bill_submitted",
+  "column_break_flrf",
+  "eligible_amount",
+  "column_break_rnfu",
+  "rate",
+  "column_break_snmd",
+  "gross_amount",
+  "column_break_lvna",
+  "credit_amount",
+  "column_break_qv5h",
+  "paye"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "bill_submitted",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Bill Submitted  Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_flrf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "eligible_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Eligible Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rnfu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "gross_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gross Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_lvna",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "credit_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Amount to be credited",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qv5h",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "paye",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Paye",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "default": "0.7",
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Rate",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_snmd",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-23 12:47:40.280611",
+ "modified_by": "Administrator",
+ "module": "Quantbit Boi Customizations",
+ "name": "Electric Charges Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

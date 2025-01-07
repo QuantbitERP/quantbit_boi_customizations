@@ -19,14 +19,20 @@ class KeyAllowance(Document):
 				if start_date > end_date:
 					frappe.throw("From Date cannot be after To Date.")
 		
+				rate = frappe.get_value("Key Allowance Rate",{"from_date":["<=",i.from_date],"to_date":[">=",i.to_date]},"rate")
+				if rate:
+					i.rate = rate
+				else:
+					frappe.msgprint("Rate Not Found for given From Date and To Date")
 				total_days = date_diff(end_date, start_date)
 				i.total_days = total_days
-
+				i.amount = i.total_days * rate if rate else 0
     
     
 		self.total_days = self.calculate_total(child_table="key_details",total_field="total_days",condition_field= "total_days")
-		self.amount = self.total_days * self.rate if self.total_days and self.rate else 0
-  
+		self.amount = self.calculate_total(child_table="key_details",total_field="amount",condition_field= "amount")
+		
+
   
 @frappe.whitelist()
 def make_additional_salary(source_name,target_doc = None):

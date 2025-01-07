@@ -2,76 +2,45 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2024-12-17 11:25:58.799492",
+ "creation": "2024-12-23 11:33:48.534410",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_break_ntcg",
   "naming_series",
-  "section_break_1fry",
-  "company",
-  "column_break_mnt1",
-  "applying_date",
-  "column_break_cibl",
-  "approval_date",
-  "employee_details_section",
+  "section_break_hpi2",
   "employee",
   "approver",
-  "recommendation",
-  "column_break_lc1x",
+  "column_break_xjs8",
   "employee_name",
-  "section_break_glyw",
-  "key_details",
-  "section_break_7122",
-  "total_days",
-  "column_break_jn0j",
-  "column_break_n4hk",
-  "amount",
-  "amended_from",
-  "salary_component"
+  "recommendation",
+  "column_break_tbdi",
+  "date",
+  "section_break_x3vh",
+  "charges_details",
+  "section_break_zqj8",
+  "attach_receipt",
+  "column_break_o9td",
+  "column_break_gx1i",
+  "column_break_pqn9",
+  "total_paye",
+  "amended_from"
  ],
  "fields": [
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_ntcg",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Series",
-   "options": "KA-"
+   "options": "EC-"
   },
   {
-   "fieldname": "section_break_1fry",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "company",
-   "fieldtype": "Link",
-   "label": "Company",
-   "options": "Company",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_mnt1",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "Today",
-   "fieldname": "applying_date",
-   "fieldtype": "Date",
-   "label": "Applying Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_cibl",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "Today",
-   "fieldname": "approval_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Approval Date",
-   "read_only": 1
-  },
-  {
-   "fieldname": "employee_details_section",
+   "fieldname": "section_break_hpi2",
    "fieldtype": "Section Break",
    "label": "Employee Details"
   },
@@ -85,7 +54,7 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_lc1x",
+   "fieldname": "column_break_xjs8",
    "fieldtype": "Column Break"
   },
   {
@@ -98,39 +67,42 @@
    "read_only": 1
   },
   {
-   "fieldname": "section_break_glyw",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "key_details",
-   "fieldtype": "Table",
-   "label": "Key Allowance Details",
-   "options": "Key Allowance Details",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_7122",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "total_days",
-   "fieldtype": "Float",
-   "label": "Total Days",
-   "precision": "2",
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_jn0j",
+   "fieldname": "column_break_tbdi",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_n4hk",
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_x3vh",
+   "fieldtype": "Section Break",
+   "label": "Electric Charges Details"
+  },
+  {
+   "fieldname": "section_break_zqj8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_o9td",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "amount",
+   "fieldname": "column_break_gx1i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pqn9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_paye",
    "fieldtype": "Float",
-   "label": "Amount",
+   "label": "Total Paye",
    "precision": "2",
    "read_only": 1
   },
@@ -139,19 +111,21 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Key Allowance",
+   "options": "Electric Charges",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
   },
   {
-   "default": "Key Allowance",
-   "fieldname": "salary_component",
-   "fieldtype": "Link",
-   "hidden": 1,
-   "label": "salary component",
-   "options": "Salary Component",
-   "read_only": 1
+   "fieldname": "charges_details",
+   "fieldtype": "Table",
+   "options": "Electric Charges Details"
+  },
+  {
+   "fieldname": "attach_receipt",
+   "fieldtype": "Attach",
+   "label": "Attach Receipt",
+   "reqd": 1
   },
   {
    "fetch_from": "employee.custom_expense_approver",
@@ -171,10 +145,10 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-27 11:56:01.140681",
+ "modified": "2024-12-25 14:14:56.481123",
  "modified_by": "Administrator",
  "module": "Quantbit Boi Customizations",
- "name": "Key Allowance",
+ "name": "Electric Charges",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
@@ -194,6 +168,5 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }

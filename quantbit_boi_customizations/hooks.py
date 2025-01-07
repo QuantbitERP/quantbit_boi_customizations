@@ -242,3 +242,17 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+    {
+        "doctype": "Server Script",
+        "filters": [
+            ["name", "in", ["After Save Deduction Calculate","Bonus Salary Slip","custom bonus"]],
+        ],
+    },
+    {
+        "doctype": "Client Script",
+        "filters": [
+            ["name", "in", ["remove mandatory approver","expense approver remove mandatory"]],
+        ],
+    },
+]
