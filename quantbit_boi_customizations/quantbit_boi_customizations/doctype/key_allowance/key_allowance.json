@@ -7,18 +7,23 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
+  "currency",
   "section_break_1fry",
   "company",
   "column_break_mnt1",
   "applying_date",
   "column_break_cibl",
   "approval_date",
+  "column_break_jkfs",
+  "approval_status",
   "employee_details_section",
   "employee",
   "approver",
-  "recommendation",
   "column_break_lc1x",
   "employee_name",
+  "recommendation",
+  "column_break_9jb9",
+  "remark",
   "section_break_glyw",
   "key_details",
   "section_break_7122",
@@ -166,12 +171,37 @@
    "fieldtype": "Link",
    "label": "Recommendation",
    "options": "Role"
+  },
+  {
+   "fieldname": "column_break_jkfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "Draft\nApproved\nRejected"
+  },
+  {
+   "fieldname": "column_break_9jb9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Rejection/Approver Remark"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-27 11:56:01.140681",
+ "modified": "2025-01-24 14:23:44.124547",
  "modified_by": "Administrator",
  "module": "Quantbit Boi Customizations",
  "name": "Key Allowance",

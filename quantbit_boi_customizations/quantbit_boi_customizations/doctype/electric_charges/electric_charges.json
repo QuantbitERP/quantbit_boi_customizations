@@ -16,6 +16,9 @@
   "recommendation",
   "column_break_tbdi",
   "date",
+  "approval_status",
+  "column_break_jez6",
+  "remark",
   "section_break_x3vh",
   "charges_details",
   "section_break_zqj8",
@@ -140,12 +143,27 @@
    "fieldtype": "Link",
    "label": "Recommendation",
    "options": "Role"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "Draft\nApproved\nRejected"
+  },
+  {
+   "fieldname": "column_break_jez6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Rejection/Approver Remark"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-25 14:14:56.481123",
+ "modified": "2025-01-24 12:49:41.174739",
  "modified_by": "Administrator",
  "module": "Quantbit Boi Customizations",
  "name": "Electric Charges",

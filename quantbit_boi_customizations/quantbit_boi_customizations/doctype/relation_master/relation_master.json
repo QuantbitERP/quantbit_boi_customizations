@@ -1,27 +1,27 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:society_name",
- "creation": "2024-12-25 11:57:54.885101",
+ "autoname": "field:relation",
+ "creation": "2025-01-22 15:04:28.125812",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "society_name"
+  "relation"
  ],
  "fields": [
   {
-   "fieldname": "society_name",
+   "fieldname": "relation",
    "fieldtype": "Data",
-   "label": "Society Name",
+   "label": "Relation",
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-24 12:49:41.786019",
+ "modified": "2025-01-24 12:49:42.485140",
  "modified_by": "Administrator",
  "module": "Quantbit Boi Customizations",
- "name": "Society Name",
+ "name": "Relation Master",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

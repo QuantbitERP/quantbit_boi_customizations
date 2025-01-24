@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-22 15:02:52.101019",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "age",
+  "relation",
+  "marriage_date",
+  "column_break_7osd",
+  "dob",
+  "education",
+  "age_group",
+  "national_id"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full name"
+  },
+  {
+   "columns": 2,
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Age"
+  },
+  {
+   "columns": 2,
+   "fieldname": "relation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Relation",
+   "options": "Relation Master"
+  },
+  {
+   "fieldname": "marriage_date",
+   "fieldtype": "Date",
+   "label": "Marriage date"
+  },
+  {
+   "fieldname": "column_break_7osd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "columns": 2,
+   "fieldname": "education",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Education",
+   "options": "Qualification"
+  },
+  {
+   "fieldname": "age_group",
+   "fieldtype": "Select",
+   "label": "Age Group",
+   "options": "\nMinor\nAdult"
+  },
+  {
+   "columns": 2,
+   "fieldname": "national_id",
+   "fieldtype": "Data",
+   "label": "National ID"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-24 12:49:42.321510",
+ "modified_by": "Administrator",
+ "module": "Quantbit Boi Customizations",
+ "name": "Family Dependent Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
