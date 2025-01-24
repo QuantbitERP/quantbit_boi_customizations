@@ -2,36 +2,37 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2024-12-23 11:01:34.368309",
+ "creation": "2025-01-24 12:39:08.765395",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_e8xx",
+  "section_break_ntcg",
   "naming_series",
-  "section_break_hkbk",
+  "section_break_hpi2",
   "employee",
   "approver",
-  "column_break_nzhf",
+  "column_break_xjs8",
   "employee_name",
-  "column_break_l9v6",
+  "recommendation",
+  "column_break_tbdi",
   "date",
-  "land_owner_account_no",
-  "house_rent_benefit_details_section",
-  "benifit_details",
-  "section_break_vxvn",
+  "approval_status",
+  "column_break_jez6",
+  "remark",
+  "section_break_x3vh",
+  "charges_details",
+  "section_break_zqj8",
   "attach_receipt",
-  "column_break_8zxl",
-  "column_break_door",
-  "column_break_ntrd",
-  "total_amount",
-  "column_break_ptqy",
-  "amount_per_month",
+  "column_break_o9td",
+  "column_break_gx1i",
+  "column_break_pqn9",
+  "total_paye",
   "amended_from"
  ],
  "fields": [
   {
    "collapsible": 1,
-   "fieldname": "section_break_e8xx",
+   "fieldname": "section_break_ntcg",
    "fieldtype": "Section Break",
    "hidden": 1
   },
@@ -39,11 +40,12 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Series",
-   "options": "HRB-"
+   "options": "WC-"
   },
   {
-   "fieldname": "section_break_hkbk",
-   "fieldtype": "Section Break"
+   "fieldname": "section_break_hpi2",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
   },
   {
    "fieldname": "employee",
@@ -55,7 +57,14 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_nzhf",
+   "fetch_from": "employee.custom_expense_approver",
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "label": "Approver",
+   "options": "Role"
+  },
+  {
+   "fieldname": "column_break_xjs8",
    "fieldtype": "Column Break"
   },
   {
@@ -68,7 +77,14 @@
    "read_only": 1
   },
   {
-   "fieldname": "column_break_l9v6",
+   "fetch_from": "employee.custom_expense_recommendation",
+   "fieldname": "recommendation",
+   "fieldtype": "Link",
+   "label": "Recommendation",
+   "options": "Role"
+  },
+  {
+   "fieldname": "column_break_tbdi",
    "fieldtype": "Column Break"
   },
   {
@@ -80,58 +96,33 @@
    "label": "Date"
   },
   {
-   "fieldname": "house_rent_benefit_details_section",
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "Draft\nApproved\nRejected"
+  },
+  {
+   "fieldname": "column_break_jez6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Rejection/Approver Remark"
+  },
+  {
+   "fieldname": "section_break_x3vh",
    "fieldtype": "Section Break",
-   "label": "House Rent Benefit Details"
+   "label": "Water Charges Details"
   },
   {
-   "fieldname": "benifit_details",
+   "fieldname": "charges_details",
    "fieldtype": "Table",
-   "options": "House Rent Benefit Details"
+   "options": "Water Charges Details"
   },
   {
-   "fieldname": "section_break_vxvn",
+   "fieldname": "section_break_zqj8",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_8zxl",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_door",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_ntrd",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "total_amount",
-   "fieldtype": "Float",
-   "label": "Total Amount",
-   "precision": "2",
-   "read_only": 1
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "House Rent Benefit",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
-  },
-  {
-   "fieldname": "column_break_ptqy",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "amount_per_month",
-   "fieldtype": "Float",
-   "label": "Total Amount Per Month",
-   "precision": "2",
-   "read_only": 1
   },
   {
    "fieldname": "attach_receipt",
@@ -140,30 +131,56 @@
    "reqd": 1
   },
   {
-   "fieldname": "land_owner_account_no",
-   "fieldtype": "Data",
-   "label": "Land Owner Account No."
+   "fieldname": "column_break_o9td",
+   "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "employee.custom_expense_approver",
-   "fieldname": "approver",
+   "fieldname": "column_break_gx1i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pqn9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_paye",
+   "fieldtype": "Float",
+   "label": "Total Paye",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
    "fieldtype": "Link",
-   "label": "Verifier",
-   "options": "Role"
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Water Charges",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Water Charges",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-01-24 12:49:41.459018",
+ "modified": "2025-01-24 13:04:07.038793",
  "modified_by": "Administrator",
  "module": "Quantbit Boi Customizations",
- "name": "House Rent Benefit",
+ "name": "Water Charges",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
-   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -179,6 +196,5 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }
